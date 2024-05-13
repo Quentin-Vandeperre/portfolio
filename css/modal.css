@@ -10,7 +10,7 @@
 	background: rgba(0, 0, 0, 0.8);
 }
 
-.modalWrapper, .modalWrapper2{
+.modalWrapper, .modalWrapper2, .modalWrapper3, .modalWrapper4{
 	overflow: auto;
 	width: 80%;
 	height: 688px;
@@ -18,7 +18,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 30px;
 }
 
 .jsModalClose {
@@ -28,14 +27,18 @@
 	margin-right: 60px;
 }
 
-.jsModalClose, .jsModalClose1 {
+.jsModalClose, .jsModalClose2, .jsModalClose3, .jsModalClose4 {
 	border: none;
 	background-color: white;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
-.buttonModalNextProject {
+.jsModalClose2 {
+	margin-right: 0;
+}
+
+.buttonModalNextProject, .buttonModalNextProject2, .buttonModalNextProject3 {
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -90,7 +93,7 @@
 
 /**************************************MODAL2********************************************/
 
-.returnModal1 {
+.returnModal2, .returnModal3, .returnModal4 {
 	border: none;
 	background-color: white;
 }
@@ -101,6 +104,9 @@
 	width: 90%;
 }
 
+.lienGitHub {
+	text-align: center;
+}
 
 
 

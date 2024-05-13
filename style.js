@@ -1,18 +1,37 @@
 let modal = null
 const jsModal = document.querySelector(".jsModal")
 const jsModal2 = document.querySelector(".jsModal2")
+const jsModal3 = document.querySelector(".jsModal3")
+const jsModal4 = document.querySelector(".jsModal4")
 const jsModalClose = document.querySelector(".jsModalClose")
-const jsModalClose1 = document.querySelector(".jsModalClose1")
+const jsModalClose2 = document.querySelector(".jsModalClose2")
+const jsModalClose3 = document.querySelector(".jsModalClose3")
+const jsModalClose4 = document.querySelector(".jsModalClose4")
 const modal1 = document.querySelector('#modal1')
 const modal2 = document.querySelector('#modal2')
-let buttonReturn = document.querySelector(".returnModal1")
+const modal3 = document.querySelector('#modal3')
+const modal4 = document.querySelector('#modal4')
+let buttonReturn2 = document.querySelector(".returnModal2")
+let buttonReturn3 = document.querySelector(".returnModal3")
+let buttonReturn4 = document.querySelector(".returnModal4")
+const buttonModalNextProject = document.querySelector(".buttonModalNextProject")
+const buttonModalNextProject2 = document.querySelector(".buttonModalNextProject2")
+const buttonModalNextProject3 = document.querySelector(".buttonModalNextProject3")
 
-jsModal.addEventListener('click', function(event){
+jsModal.addEventListener('click', function(){
     openModal()
 })
 
-jsModal2.addEventListener('click', function(event){
+jsModal2.addEventListener('click', function(){
   openModal2()
+})
+
+jsModal3.addEventListener('click', function(){
+  openModal3()
+})
+
+jsModal4.addEventListener('click', function(){
+  openModal4()
 })
 
 function openModal() {
@@ -33,14 +52,38 @@ function openModal2() {
   modal2.setAttribute('aria-modal', 'true');
   modal2.style.display = null;
   modal2.addEventListener('click', closeModal)
-  jsModalClose1.addEventListener("click", function(){
+  jsModalClose2.addEventListener("click", function(){
       closeModal()
   })
   modal = modal2
   modal.querySelector('.jsModalStop').addEventListener('click', stopPropagation)
 }
 
+function openModal3() {
+  modal2.style.display = "none";
+  modal3.removeAttribute('aria-hidden');
+  modal3.setAttribute('aria-modal', 'true');
+  modal3.style.display = null;
+  modal3.addEventListener('click', closeModal)
+  jsModalClose3.addEventListener("click", function(){
+      closeModal()
+  })
+  modal = modal3
+  modal.querySelector('.jsModalStop').addEventListener('click', stopPropagation)
+}
 
+function openModal4() {
+  modal3.style.display = "none";
+  modal4.removeAttribute('aria-hidden');
+  modal4.setAttribute('aria-modal', 'true');
+  modal4.style.display = null;
+  modal4.addEventListener('click', closeModal)
+  jsModalClose4.addEventListener("click", function(){
+      closeModal()
+  })
+  modal = modal4
+  modal.querySelector('.jsModalStop').addEventListener('click', stopPropagation)
+}
 
 function closeModal() {
   if(modal === null)return
@@ -60,19 +103,32 @@ window.addEventListener('keydown', function (e){
   }
 })
 
-buttonReturn.addEventListener("click", function() {
+buttonReturn2.addEventListener("click", function() {
   modal1.style.display = "flex"
   modal2.style.display = "none"
   modal = modal1                                  // modal = modal2 donc on ne pourra plus fermer la modal
 })
 
+buttonReturn3.addEventListener("click", function() {
+  modal2.style.display = "flex"
+  modal3.style.display = "none"
+  modal = modal2                                  
+})
 
-
-
-const buttonModalNextProject = document.querySelector(".buttonModalNextProject")
-
-// lors du click sur le bouton "ajouter une photo" on appelle la fonction pour ouvrir la deuxieme modal
+buttonReturn4.addEventListener("click", function() {
+  modal3.style.display = "flex"
+  modal4.style.display = "none"
+  modal = modal3                                  
+})
 
 buttonModalNextProject.addEventListener("click", function(){
   openModal2()
+})
+
+buttonModalNextProject2.addEventListener("click", function(){
+  openModal3()
+})
+
+buttonModalNextProject3.addEventListener("click", function(){
+  openModal4()
 })
