@@ -13,7 +13,7 @@
 .modalWrapper, .modalWrapper2, .modalWrapper3, .modalWrapper4{
 	overflow: auto;
 	width: 80%;
-	height: 688px;
+	height: 668px;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
@@ -130,6 +130,12 @@
 	.infoProjectBooki, .picturePrincipalModal {
 		width: 90%;
 		margin: 0;
+	}
+
+	.infoProjectBooki {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.pictureSecondaireModal {
